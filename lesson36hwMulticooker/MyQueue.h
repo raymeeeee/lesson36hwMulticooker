@@ -71,7 +71,7 @@ namespace myQueue {
 			else {
 				while (p != nullptr)
 				{
-					cout << p->info << " ";
+					//cout << p->info << " ";
 
 					//cout << "\tPrev:" << p->prev << endl;
 					//cout << "\tNext:" << p->next << endl;

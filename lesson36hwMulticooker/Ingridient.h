@@ -26,8 +26,8 @@ public:
 	string getName()const { return name; }
 	float getMinutes()const { return minutes; }
 
-	bool operator<(const Ingridient& ingridientRight)const {
-		return minutes < ingridientRight.minutes;
+	bool operator>(const Ingridient& ingridientRight)const {
+		return (minutes > ingridientRight.minutes);
 	}
 
 	void showIngridient()const {

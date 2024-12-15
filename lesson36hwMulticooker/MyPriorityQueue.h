@@ -16,7 +16,7 @@ namespace myQueue {
 			else {
 				Node<U>* p = Queue<U>::head;
 				//info = priority
-				while (p != nullptr && el->info < p->info) {
+				while (p != nullptr && el->info > p->info) {
 					p = p->next;
 				}
 				if (p == Queue<U>::head) { //add to front

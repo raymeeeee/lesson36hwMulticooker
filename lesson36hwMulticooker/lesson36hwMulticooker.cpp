@@ -11,20 +11,22 @@ int main()
         cout << "ADD to add ingridient" << endl;
         cout << "FINISH to cook the dish" << endl;
         cin >> option;
+        cout << endl;
         if (option == "ADD") {
             string name;
             float minutes;
             cout << "Enter name of the ingridient: "; cin >> name;
             cout << "Enter minutes to cook: ";  cin >> minutes;
             cout << endl;
-            Ingridient ingridient(name, minutes);
 
-            dish.push_back(ingridient);
-
-            dish.show();
+            dish.push_back(Ingridient(name, minutes));
         }
         else if (option == "FINISH") {
-            dish.show();
+            while (!dish.isEmpty()) {
+                dish.first().showIngridient();
+                cout << endl;
+                dish.pop_front();
+            }
             break;
         }
         else {
